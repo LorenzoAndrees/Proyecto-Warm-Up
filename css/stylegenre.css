@@ -4,14 +4,17 @@
     box-sizing: border-box;
     font-family: arial;
 }
-body{
+
+body {
     background: #48D1CC;
 }
-span{
+
+span {
     width: 743px;
     font-weight: bold;
 }
-.encabezado{
+
+.encabezado {
     background-color: transparent;
     background: url('../img/ban1.png');
     width: 743px;
@@ -24,125 +27,145 @@ span{
     color: white;
     text-shadow: 2px 2px 2px black;
 }
-.contenedor{
+
+.contenedor {
     display: block;
     overflow: hidden;
-    position:relative;
+    position: relative;
     margin-right: 250px;
-    top:90px;
+    top: 70px;
     width: 565px;
-    overflow:hidden;
+    overflow: hidden;
     color: #fff;
     font-family: arial;
-} 
-.contenedor h1{
+}
+
+.contenedor h1 {
     margin: 100px 0px 0px 40px;
-    position:absolute; 
-    left:0px;
-    top:30px; 
-    transform:translateX(-130%);
-    transition:all .5s ease;
-} 
-.contenedor p{
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    transform: translateX(-130%);
+    transition: all .5s ease;
+}
+
+.contenedor p {
     margin: 90px 0px 0px 40px;
-    position:absolute; 
-    left:0px;
-    top:100px; 
-    transform:translateX(120%); 
-    transition:all .4s ease;  
-} 
-.contenedor:before{ 
-   position: absolute;
-   top:335px; 
-   left:20px;
-   content:""; 
-   width:0%; 
-   height:3px; 
-   background:#fff;
-   transition:all .3s ease;
-} 
-.contenedor:after{ 
-    position: absolute; 
-    top:10px; 
-    right:20px; 
-    content:""; 
-    width:0%; 
-    height:3px; 
-    background:#fff;
-     transition:all .3s ease;
-} 
-.contenedor:hover:before{ 
+    position: absolute;
+    left: 0px;
+    top: 100px;
+    transform: translateX(120%);
+    transition: all .4s ease;
+}
+
+.contenedor:before {
+    position: absolute;
+    top: 335px;
+    left: 20px;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #fff;
+    transition: all .3s ease;
+}
+
+.contenedor:after {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #fff;
+    transition: all .3s ease;
+}
+
+.contenedor:hover:before {
     width: 90%;
 }
+
 .contenedor:hover:after {
     width: 90%;
 }
-.contenedor:hover h1,.contenedor:hover p{
-    transform:translateX(100%); 
-    transition:all .3s ease;
+
+.contenedor:hover h1,
+.contenedor:hover p {
+    transform: translateX(100%);
+    transition: all .3s ease;
 }
-.contenedor:hover{
+
+.contenedor:hover {
     background-size: 110% 110%;
-    transition:all .5s ease;
+    transition: all .5s ease;
 }
-.contenedor2{
+
+.contenedor2 {
     display: block;
     overflow: hidden;
-    position:relative;
-    top:90px;
+    position: relative;
+    top: 70px;
     width: 535;
-    overflow:hidden;
+    overflow: hidden;
     color: #fff;
     font-family: arial;
     margin-left: 250px;
 }
-.contenedor2 h1{
+
+.contenedor2 h1 {
     margin: 100px 0px 0px 40px;
-    position:absolute; 
-    left:0px;
-    top:30px; 
-    transform:translateX(-125%);
-    transition:all .5s ease;
-} 
-.contenedor2 p{
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    transform: translateX(-125%);
+    transition: all .5s ease;
+}
+
+.contenedor2 p {
     margin: 90px 0px 0px 40px;
-    position:absolute; 
-    left:0px;
-    top:100px; 
-    transform:translateX(120%); 
-    transition:all .4s ease;  
-} 
-.contenedor2:before{ 
-   position: absolute;
-   top:335px; 
-   left:20px;
-   content:""; 
-   width:0%; 
-   height:3px; 
-   background:#fff;
-   transition:all .3s ease;
-} 
-.contenedor2:after{ 
-    position: absolute; 
-    top:10px; 
-    right:20px; 
-    content:""; 
-    width:0%; 
-    height:3px; 
-    background:#fff;
-     transition:all .3s ease;
-} 
-.contenedor2:hover:before{ 
+    position: absolute;
+    left: 0px;
+    top: 100px;
+    transform: translateX(120%);
+    transition: all .4s ease;
+}
+
+.contenedor2:before {
+    position: absolute;
+    top: 335px;
+    left: 20px;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #fff;
+    transition: all .3s ease;
+}
+
+.contenedor2:after {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #fff;
+    transition: all .3s ease;
+}
+
+.contenedor2:hover:before {
     width: 90%;
 }
+
 .contenedor2:hover:after {
     width: 90%;
 }
-.contenedor2:hover h1,.contenedor2:hover p{
-    transform:translateX(70%); 
-    transition:all .3s ease;
+
+.contenedor2:hover h1,
+.contenedor2:hover p {
+    transform: translateX(70%);
+    transition: all .3s ease;
 }
-.contenedor2:hover{
+
+.contenedor2:hover {
     background-size: 110% 110%;
-    transition:all .5s ease;
+    transition: all .5s ease;
 }
