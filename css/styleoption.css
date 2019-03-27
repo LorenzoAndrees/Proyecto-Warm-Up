@@ -5,13 +5,32 @@
     font-family: arial;
 }
 
+html,
 body {
-    background: rgb(240, 172, 116);
+    height: 100vh;
+    background: rgb(155, 196, 194);
+    margin: 0;
+    padding: 0;
 }
 
 span {
-    width: 743px;
+    width: 100%;
     font-weight: bold;
+}
+
+.horizontal {
+    display: flex;
+    justify-content: center;
+}
+
+.vertical2 {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.divPadre {
+    height: 30vh;
 }
 
 .encabezado {
@@ -19,13 +38,34 @@ span {
     background: url('../img/ban1.png');
     width: 743px;
     height: 127px;
-    position: center;
     margin-top: 50px;
     font-family: arial;
     font-size: auto;
     text-align: center;
     color: white;
     text-shadow: 2px 2px 2px black;
+}
+
+.box {
+    display: flex;
+    min-height: 100%;
+}
+
+.box>div {
+    flex: 1;
+    display: flex;
+}
+
+.fila0 {
+    background: transparent;
+}
+
+.fila1 {
+    background: transparent;
+}
+
+h1 {
+    font-size: 250%;
 }
 
 .imagen {
@@ -39,12 +79,14 @@ span {
 .contenedor {
     display: block;
     position: relative;
-    margin-right: 100px;
-    top: 90px;
-    width: 800px;
+    margin-right: 0px;
+    top: 0px;
+    width: 100%;
+    max-height: 50%;
     overflow: hidden;
     color: #fff;
     font-family: arial;
+    text-align: center;
 }
 
 .contenedor h1 {
