@@ -9,16 +9,33 @@
 </head>
 
 <body>
-        <marquee bgcolor="#FFFFFF" width="50%" scrolldelay="100" scrollamount="5" direction="left" loop="infinite">Estás viendo el ejemplo que hemos hecho nosotros.
 
-            </marquee>
-    <div id="contenedor"></div>
-    <div id="contenedor">
-        <div class="loader" id="loader">Cargando...</div>
+    <div class="container">
+        <div class="form__top">
+            <h2><span>INGRESE SU JUBILACIÓN ESPERADA</span></h2>
+        </div>
+        <form class="form__reg">
+            <input name="Jubilación Esperada" id="JB" class="input" minlenght="2" maxlenght="2" type=number
+                placeholder="&#128100;  Jubilación Esperada" required autofocus>
+            <div class="btn__form">
+                <input class="btn__submit" type="submit" value="CALCULAR">
+            </div>
+        </form>
     </div>
-    <script src="js/scriptfondo.js"></script>
 
-    
+    <div id="loading">
+        <div id="contenedor">
+            <p>
+                <h2><span>CARGANDO...</span></h2>
+            </p>
+        </div>
+        <div id="contenedor">
+            <div class="loader" id="loader">Cargando...</div>
+        </div>
+    </div>
+    <script src="js/scriptahorro.js"></script>
+
+
 </body>
 
 </html>

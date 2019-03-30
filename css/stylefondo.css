@@ -8,6 +8,15 @@
 body {
   background: rgb(109, 177, 109);
 }
+p {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+p span {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px black;
+}
 .loader:before,
 .loader:after,
 .loader {
