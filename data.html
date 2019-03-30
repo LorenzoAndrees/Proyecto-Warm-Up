@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="./css/reset.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
 	<link rel="stylesheet" href="./css/main.css">
-	<title>Datos</title>
+	<title>Retirement Simulator</title>
 </head>
 <body>
 
@@ -14,11 +14,17 @@
 		<div class="form__top">
 			<h2><span>INGRESE SUS DATOS</span></h2>
 		</div>		
-		<form class="form__reg" action="">
-			<input class="input" type="text" placeholder="&#128100;  Edad" required autofocus>
-            <input class="input" type="email" placeholder="&#9993;  Valor total de sus fondos (en CLP)" required>
-            <input class="input" type="text" placeholder="&#128222;  Monto de cotización voluntaria" required>
-            <input class="input" type="text" placeholder="&#8962;  AFP" required>
+		<form class="form__reg" action="option.html" >
+			<input name="Edad" id="Edad" class="input" minlenght="2" maxlenght ="2" type=number placeholder="&#128100;  Edad" required autofocus>
+			<input name="ValorT" id="ValorT" class="input" style="min-width: 100%; width: 100%;"  type="number" placeholder="&#9993;  Valor total de sus fondos (en CLP)" required>
+			<input name="MCV" id="MCV" class="input" style="min-width: 100%; width: 100%;"  type="number" placeholder="&#128222;  Monto de cotización voluntaria" required>
+			<input name="SIP" id="SIP" class="input" style="min-width: 100%; width: 100%;"  type="number" placeholder="&#128222;  Sueldo imponible proyectado" required>
+			<input name="AFP" id="AFP" class="input" minlenght="3" maxlenght ="9" type="text" placeholder="&#8962;  AFP" required>
+			<p>Sexo:
+				<input type="radio" class="input" name="sex" value="h" required> Hombre
+    			<input type="radio" class="input" name="sex" value="m" required> Mujer
+  			</p>
+
             <div class="btn__form">
             	<input class="btn__submit" type="submit" value="REGISTRAR">
             	<input class="btn__reset" type="reset" value="VOLVER A INGRESAR DATOS">	
