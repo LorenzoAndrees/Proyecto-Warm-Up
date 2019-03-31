@@ -10,7 +10,7 @@ body {
 .container {
 	max-width: 450px;
 	height: auto;
-	background-color: #EFEFEF;
+	background-color:rgba(214, 214, 214, 0.836);
 	margin: 5% auto;
 	padding-bottom: 1rem;
 	
@@ -29,7 +29,10 @@ body {
 	color: #CAC8C8;
 	font-size: 20px;
 }
-
+h4 span {
+	color: rgb(255, 255, 255);
+	text-shadow: 2px 2px 2px black;
+}
 h2 span {
 	color: rgb(255, 255, 255);
 	text-shadow: 2px 2px 2px black;
