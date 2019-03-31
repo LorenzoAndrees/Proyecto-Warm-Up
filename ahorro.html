@@ -12,29 +12,23 @@
 
     <div class="container">
         <div class="form__top">
-            <h2><span>INGRESE SU JUBILACIÓN ESPERADA</span></h2>
+            <h2><span>INGRESA TU JUBILACIÓN ESPERADA</span></h2>
         </div>
         <form class="form__reg">
             <h4><span>Jubilación Esperada:</span></h4><input name="Jubilación Esperada" id="JB" class="input"
                 minlenght="2" maxlenght="2" type=number placeholder="&#128100;  Ej: 900000" required autofocus>
-            <asp:Button runat="server" ID="resultado" Text="" OnClick="newButton_Click">
+            <asp:Button id="resultado" OnClick="newButton_Click">
                 <div class="btn__form">
                     <input class="btn__submit" type="submit" value="CALCULAR">
                 </div>
             </asp:Button>
-
         </form>
     </div>
     <div id="calculo">
-
         <div id="loading">
             <div id="contenedor"></div>
             <div id="contenedor">
-                
-                <div class="loader" id="loader">Cargando...</div>
-                <p>
-                        <h2><span>CARGANDO...</span></h2>
-                    </p>
+                <div class="loader" id="loader"></div>
             </div>
         </div>
         <script src="js/scriptahorro.js"></script>

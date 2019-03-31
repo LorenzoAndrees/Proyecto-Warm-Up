@@ -8,15 +8,6 @@
   body {
     background: rgb(177, 109, 124);
   }
-  p {
-    animation-duration: 3s;
-    animation-name: slidein;
-    animation-iteration-count: infinite;
-  }
-  p span {
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 2px black;
-  }
   h4 span {
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 2px black;
@@ -106,7 +97,7 @@
     animation: load7 1.8s infinite ease-in-out;
   }
   .loader {
-    margin: 25em auto;
+    margin: 10em auto;
     font-size: 10px;
     position: relative;
     text-indent: -9999em;

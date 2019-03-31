@@ -1,16 +1,18 @@
 // start se ejecuta en el evento onload del navegador
-window.onload = start();
+//window.onload = resultado();
+let loadingTx = document.getElementById('loading');
+loadingTx.style.display = 'none';
 
-function start(){
-    let loadingEl = document.getElementById('loader');
-    let loadingTx = document.getElementById('loading');
-    // setTimeout(function(), time)
-    setTimeout(() => {
-        loadingEl.style.display = 'none';
-        loadingTx.style.display = 'none';
-    },3050);
-}
-
-function resultado(){
-    document.getElementById("resultado").click();
+var button = document.getElementById("resultado");
+button.onclick = function() {
+    var jb = document.getElementById("JB").Value;
+    console.log(jb);
+    if (jb != undefined){
+        loadingTx.style.display = 'block';
+        setTimeout(() => {
+            loadingTx.style.display = 'none';
+        }, 3050);
+        return false;
+    }
+        
 }
