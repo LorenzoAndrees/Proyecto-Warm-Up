@@ -11,13 +11,13 @@
 <body>
 
     <div class="container">
-        <div class="form__top">
+        <div class="form__top" autocomplete="off">
             <h2><span>INGRESA TU JUBILACIÓN ESPERADA</span></h2>
         </div>
-        <form class="form__reg">
+        <form class="form__reg" id="formulario">
             <h4><span>Jubilación Esperada:</span></h4><input name="Jubilación Esperada" id="JB" class="input"
-                minlenght="2" maxlenght="2" type=number placeholder="&#128100;  Ej: 900000" required autofocus>
-            <asp:Button id="resultado" OnClick="newButton_Click">
+                minlenght="2" maxlenght="2" type=number min=0 placeholder="&#128100;  Ej: 900000" required>
+            <asp:Button id="calculate">
                 <div class="btn__form">
                     <input class="btn__submit" type="submit" value="CALCULAR">
                 </div>
@@ -31,8 +31,28 @@
                 <div class="loader" id="loader"></div>
             </div>
         </div>
-        <script src="js/scriptahorro.js"></script>
+        <div class="container2" id="result">
+
+            <div class="form__top">
+                <h2><span>RESULTADO:</span></h2>
+            </div>
+            <form class="form__reg" id="showrs" action="javascript:history.back()">
+                <h4>
+                    <span>Valor del monto de APV que debe agregar cada mes, considerando la rentabilidad:</span>
+                    <span id="apv"></span>
+                </h4>
+                <h4>
+                    <span>Valor del monto de APV que debe agregar cada mes, sin considerar la rentabilidad:</span>
+                    <span id="apv2"></span>
+                </h4>
+                <div class="btn__form">
+                    <input class="btn__submit" type='submit' value="VOLVER ATRÁS">
+                </div>
+            </form>
+        </div>
     </div>
+    
+    <script src="js/scriptahorro.js"></script>
 
 </body>
 

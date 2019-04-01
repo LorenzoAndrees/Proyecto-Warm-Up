@@ -45,16 +45,17 @@ function calcular() {
             break;
     }
     const funds = getFunds({sip, sx, edad, rmef, vfh});
+    sessionStorage.setItem('vTotal',funds);
     const jub = getJub(funds, sx).toFixed(0);
     showInfo({funds, jub});
 }
 
 function getFunds(data) {
+    data.vfh = parseInt(data.vfh);
     var vTotal = 0;
-    let cotizacion = data.sip * 0.1;
+    let cotizacion = parseInt(data.sip * 0.1);
     const sexo = data.sx.toLowerCase();
     let old = sexo === 'm' ? 65 : 60;
-
     for (i = data.edad; i < old; i++) {
         for(j = 0; j<12; j++){
             vTotal += cotizacion;
