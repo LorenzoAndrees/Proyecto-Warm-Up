@@ -55,28 +55,26 @@ function calcularAPV(jub) {
             rmef = 0.1
             break;
     }
-    const apv = parseInt(getapv({jub,sx,vfh,edad,vTotal}));
-    const apv2 = parseInt(getapv2({sip,jub,sx,vfh,edad,vTotal}));
+    const apv = parseInt(getapv({jub,sip,sx,vfh,edad}));
+    const apv2 = parseInt(getapv2({rmef,sip,jub,sx,vfh,edad}));
     showInfo({apv,apv2});
 }
 function getapv(data){
     const sexo = data.sx.toLowerCase();
     if (sexo === 'm'){
         trabajo = 65-data.edad;
-        vTotalRel = data.jub*12*20;
-        if(vTotalRel <= data.vTotal-data.vfh){
+        if(data.vfh >=data.jub*240){
             return 0;
         }
-        apv = (vTotalRel-data.vTotal-data.vfh)/(12*trabajo);
+        apv = ((data.jub*240-data.vfh)/(trabajo*12))-data.sip*0.1;
         return apv;
     }
     else{
         trabajo = 60-data.edad;
-        vTotalRel = data.jub*12*15;
-        if(vTotalRel <= data.vTotal-data.vfh){
+        if(data.vfh >=data.jub*180){
             return 0;
         }
-        apv = (vTotalRel-data.vTotal-data.vfh)/(12*trabajo);
+        apv = ((data.jub*180-data.vfh)/(trabajo*12))-data.sip*0.1;
         return apv;
     }
 }
@@ -84,23 +82,18 @@ function getapv2(data){
     const sexo = data.sx.toLowerCase();
     if (sexo === 'm'){
         trabajo = 65-data.edad;
-        montocot= data.sip*0.1*trabajo;
-        vTotalRel = data.jub*12*20;
-        if(vTotalRel <= montocot-data.vfh){
+        if(data.vfh >=data.jub*240){
             return 0;
         }
-        apv2 = (vTotalRel-montocot-data.vfh)/(12*trabajo);
+        apv2 = ((data.jub*240-data.vfh)/(trabajo*12))-data.sip*0.1*data.rmef;
         return apv2;
     }
     else{
         trabajo = 60-data.edad;
-        montocot= data.sip*0.1*trabajo;
-        montorent= data.vTotal-montocot;
-        vTotalRel = data.jub*12*15;
-        if(vTotalRel <= montocot-data.vfh){
+        if(data.vfh >=data.jub*180){
             return 0;
         }
-        apv2 = (vTotalRel-montocot-data.vfh)/(12*trabajo);
+        apv2 = ((data.jub*180-data.vfh)/(trabajo*12))-data.sip*0.1*data.rmef;
         return apv2;
     }
 }

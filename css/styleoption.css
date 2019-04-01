@@ -8,7 +8,7 @@
 html,
 body {
     height: 100vh;
-    background: rgb(109, 177, 174);
+    background: rgb(233, 163, 123);
     margin: 0;
     padding: 0;
 }
@@ -35,7 +35,7 @@ span {
 
 .encabezado {
     background-color: transparent;
-    background: url('../img/ban1.png');
+    background: url('../img/ban2.png');
     width: 743px;
     height: 127px;
     margin-top: 50px;
@@ -65,7 +65,7 @@ span {
 }
 
 h1 {
-    font-size: 240%;
+    font-size: 238%;
 }
 
 .imagen {

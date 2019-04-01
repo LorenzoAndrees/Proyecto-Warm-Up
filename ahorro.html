@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>Retirement Simulator</title>
     <link rel="stylesheet" href="css/styleahorro.css">
+    <link rel="icon" type="image/ico" href="IMG/rs.ico"/>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
         </div>
         <form class="form__reg" id="formulario">
             <h4><span>Jubilación Esperada:</span></h4><input name="Jubilación Esperada" id="JB" class="input"
-                minlenght="2" maxlenght="2" type=number min=0 placeholder="&#128100;  Ej: 900000" required>
+                minlenght="2" maxlenght="2" type=number min=0 placeholder="&#128181;  Ej: 900000" required>
             <asp:Button id="calculate">
                 <div class="btn__form">
                     <input class="btn__submit" type="submit" value="CALCULAR">
@@ -38,11 +39,11 @@
             </div>
             <form class="form__reg" id="showrs" action="javascript:history.back()">
                 <h4>
-                    <span>Valor del monto de APV que debe agregar cada mes, considerando la rentabilidad:</span>
+                    <span>Valor del monto de APV que debes agregar cada mes, sin considerar la rentabilidad:</span>
                     <span id="apv"></span>
                 </h4>
                 <h4>
-                    <span>Valor del monto de APV que debe agregar cada mes, sin considerar la rentabilidad:</span>
+                    <span>Valor del monto de APV que debes agregar cada mes, considerando la rentabilidad:</span>
                     <span id="apv2"></span>
                 </h4>
                 <div class="btn__form">

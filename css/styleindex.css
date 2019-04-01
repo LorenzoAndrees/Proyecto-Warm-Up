@@ -9,16 +9,21 @@ body {
 .container {
 	max-width: 450px;
 	height: auto;
-	background-color: #EFEFEF;
+	background-color: rgb(255, 255, 255);
 	margin: 5% auto;
 	padding-bottom: 1rem;
 }
-
+img{
+	width:300px;
+	height:auto;
+	margin:auto;
+	display:block;
+}
 .form__top {
 	width: 100%;
 	text-align: center;
 	padding: 2rem 0 1rem;
-	border-top: solid .4rem rgba(119, 207, 163, 0.836);
+	border-top: solid .4rem rgba(206, 207, 119, 0.836);
 	margin-bottom: 1rem;
 }
 
@@ -62,21 +67,21 @@ h2 span {
 .btn__submit, .btn__reset {
 	width: 40%;
 	border-bottom: none;
-	background-color: rgba(119, 207, 163, 0.836);
+	background-color: rgba(130, 131, 78, 0.836);
 	color: white;
 }
 
 .btn__reset {
-	background-color: #EDA135;
+	background-color: #EDA135rgb(133, 69, 9);
 	width: 200px;
 }
 
 .btn__submit:hover {
-	background-color:  rgba(8, 119, 65, 0.836);
+	background-color:  rgba(204, 206, 127, 0.836);
 }
 
 .btn__reset:hover{
-	background-color: rgb(133, 69, 9);
+	background-color: #EDA135;
 }
 
 #video { 
