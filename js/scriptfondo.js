@@ -9,31 +9,68 @@ function start() {
         loadingEl.style.display = 'none';
         result.style.display = 'block';
     }, 3050);
+    calcular();
 }
 
 function calcular() {
     const edad = sessionStorage.getItem('Edad');
     const vfh = sessionStorage.getItem('ValorT');
     const sip = sessionStorage.getItem('SIP');
-    const afp = sessionStorage.getItem('AFP');
-    const SX = sessionStorage.getItem('Sex');
-    if (afp == 'Capital' || afp == 'capital') {
-        var rmef = undefined;
+    let afp = sessionStorage.getItem('AFP');
+    const sx = sessionStorage.getItem('Sex');
+    let rmef;
+    afp = afp.toLowerCase();
+    switch(afp){
+        case 'capital':
+            rmef = 1;
+        case 'cuprum':
+            rmef = 2;
+        case 'habitat':
+            rmef = 3;
+        case 'modelo':
+            rmef = 4;
+        case 'plan vital':
+            rmef = 5;
+        case 'provida':
+            rmef = 6;
+        default:
+            rmef = 0.1
     }
-    if (afp == 'Cuprum' || afp == 'cuprum') {
-        var rmef = undefined;
+    const funds = getFunds({sip, sx, edad, rmef, vfh});
+    const jub = getJub(funds, sx).toFixed(0);
+    showInfo({funds, jub});
+}
+
+function getFunds(data) {
+    let vTotal = 0;
+    let cotizacion = data.sip * 0.1;
+    const sexo = data.sx.toLowerCase();
+    let old = sexo === 'm' ? 65 : 60;
+
+    for (let i = data.edad; i < old; i++) {
+        for(let j = 0; i<12; i++){
+            vTotal += cotizacion;
+        }
+        vTotal *= data.rmef;
     }
-    if (afp == 'Habitat' || afp == 'habitat') {
-        var rmef = undefined;
+
+    vTotal += data.vfh;
+    return vTotal;
+}
+
+function getJub(vTotal, sexo){
+    if (sexo === 'm'){
+        return (vTotal/12)/20
+    } else {
+        return (vTotal/12)/15;
     }
-    if (afp == 'Modelo' || afp == 'modelo') {
-        var rmef = undefined;
-    }   
-    if (afp == 'Plan Vital' || afp == 'Plan vital' || afp == 'plan vital' || afp == 'plan Vital') {
-        var rmef = undefined;
-    }
-    if (afp == 'Provida' || afp == 'provida') {
-        var rmef = undefined;
-    }
+}
+
+function showInfo(data){
+    const fundsEl = document.getElementById('funds');
+    const jubEl = document.getElementById('jub');
+
+    fundsEl.innerHTML = '$' + data.funds;
+    jubEl.innerHTML = '$' + data.jub;
 
 }
