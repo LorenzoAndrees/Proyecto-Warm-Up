@@ -9,14 +9,25 @@
 </head>
 
 <body>
-    <p><h2><span>CARGANDO...</span></h2></p>
     <div id="contenedor"></div>
     <div id="contenedor">
         <div class="loader" id="loader">Cargando...</div>
     </div>
+    <div class="container" id="result">
+        <div class="form__top">
+            <h2><span>RESULTADO:</span></h2>
+        </div>
+        <form class="form__reg" action="javascript:history.back()">
+            <h4><span>Valor total de sus fondos a la edad de jubilación (en CLP):</span></h4><input name="ValorTotal"
+                id="ValorTl" class="output" style="min-width: 100%; width: 100%;" type="number">
+            <h4><span>Jubilación:</span></h4><input name="JB" id="Jubilación" class="output"
+                style="min-width: 100%; width: 100%;" type="number">
+            <div class="btn__form">
+                <input class="btn__submit" type='submit' value="VOLVER ATRÁS">
+            </div>
+        </form>
+    </div>
     <script src="js/scriptfondo.js"></script>
-
-    
 </body>
 
 </html>

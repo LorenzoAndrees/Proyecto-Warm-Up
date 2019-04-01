@@ -3,9 +3,11 @@ window.onload = start();
 
 function start() {
     let loadingEl = document.getElementById('loader');
+    let result = document.getElementById('result');
     // setTimeout(function(), time)
     setTimeout(() => {
         loadingEl.style.display = 'none';
+        result.style.display = 'block';
     }, 3050);
 }
 
