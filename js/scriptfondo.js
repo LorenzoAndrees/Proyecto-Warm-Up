@@ -23,22 +23,22 @@ function calcular() {
     afp = afp.toLowerCase();
     switch(afp){
         case 'capital':
-            rmef = 1;
+            rmef = 1.04828;
             break;
         case 'cuprum':
-            rmef = 2;
+            rmef = 1.04348;
             break;
         case 'habitat':
-            rmef = 3;
+            rmef = 1.05070;
             break;
         case 'modelo':
-            rmef = 1.059;
+            rmef = 1.04710;
             break;
         case 'plan vital':
-            rmef = 5;
+            rmef = 1.04520;
             break;
         case 'provida':
-            rmef = 6;
+            rmef = 1.04586;
             break;
         default:
             rmef = 0.1
